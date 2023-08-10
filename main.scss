@@ -29,6 +29,10 @@ body {
     @include container;
     width: 375px;
 
+    // @media (min-width: 993px) {
+    //     width: auto;
+    // }
+
     /***** Start Header Styles *****/
 
     .navbar {
@@ -38,140 +42,143 @@ body {
         background-color: white;
         height: 60px;
         top: 0;
-    }
     
-    .main-nav {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        text-align: center;
-        background: #FFF;
-        opacity: 0;
-        z-index: -1;
-        visibility: hidden;
-        transition: all .375s;
     
-        .selected {
-            color: $emphasis-color;
-        }
-    
-        &.is-open {
-            opacity: 1;
-            z-index: 100;
-            visibility: visible;
-            background-color: white;
-    
-            &::before {
-                content: "";
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background: rgba(255, 255, 255, 0.95);
-                z-index: -1;
-            }
-        }
-    
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            align-items: center;
-            justify-content: flex-start;
-            transform: translateY(50%);
-    
-            li {
-                text-align: center;
-                margin: 0.5rem 0;
-                width: 100%;
-                height: 5vh;
-            }
-        }
-    
-        a {
-            display: block;
-            padding: 12px 0;
-            color: $btn-background-color;
-            font-size: 2rem;
-            text-decoration: none;
-            font-weight: bold;
-            width: 100%;
-        }
-    }
-    
-    .open-main-nav {
-        position: absolute;
-        top: 15px;
-        padding-top: 20px;
-        right: 15px;
-        z-index: 1000;
-        background: none;
-        border: 0;
-        cursor: pointer;
-    
-        &:focus {
-            outline: none;
-        }
-    
-        .burger {
-            position: relative;
-            display: block;
-            width: 28px;
-            height: 4px;
-            margin: 0 auto;
-            background: $btn-background-color;
-            transform: skew(5deg);
-            transition: all .275s;
-    
-            &:after, &:before {
-                content: '';
-                display: block;
-                height: 100%;
-                background: $btn-background-color;
-                transition: all .275s;
-            }
-    
-            &:after {
-                transform: translateY(-12px) translateX(-2px) skew(-20deg);
-            }
-    
-            &:before {
-                transform: translateY(-16px) skew(-10deg);
-            }
-        }
-    
-        &.is-open {
-            .burger {
-                transform: skew(5deg) translateY(-8px) rotate(-45deg);
-    
-                &:before {
-                    transform: translateY(0px) skew(-10deg) rotate(75deg);
-                }
-    
-                &:after {
-                    transform: translateY(-12px) translateX(10px) skew(-20deg);
-                    opacity: 0;
-                }
-            }
-        }
-    
-        .burger-text {
-            display: block;
-            font-size: .675rem;
-            letter-spacing: .05em;
-            margin-top: .5em;
-            text-transform: uppercase;
-            font-weight: 500;
+        .main-nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
             text-align: center;
-            color: $btn-background-color;
+            background: #FFF;
+            opacity: 0;
+            z-index: -1;
+            visibility: hidden;
+            transition: all .375s;
+        
+            .selected {
+                color: $emphasis-color;
+            }
+        
+            &.is-open {
+                opacity: 1;
+                z-index: 100;
+                visibility: visible;
+                background-color: white;
+        
+                &::before {
+                    content: "";
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(255, 255, 255, 0.95);
+                    z-index: -1;
+                }
+            }
+        
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                align-items: center;
+                justify-content: flex-start;
+                transform: translateY(50%);
+        
+                li {
+                    text-align: center;
+                    margin: 0.5rem 0;
+                    width: 100%;
+                    height: 5vh;
+                }
+            }
+        
+            a {
+                display: block;
+                padding: 12px 0;
+                color: $btn-background-color;
+                font-size: 2rem;
+                text-decoration: none;
+                font-weight: bold;
+                width: 100%;
+            }
         }
+        
+        .open-main-nav {
+            position: absolute;
+            top: 15px;
+            padding-top: 20px;
+            right: 15px;
+            z-index: 1000;
+            background: none;
+            border: 0;
+            cursor: pointer;
+        
+            &:focus {
+                outline: none;
+            }
+        
+            .burger {
+                position: relative;
+                display: block;
+                width: 28px;
+                height: 4px;
+                margin: 0 auto;
+                background: $btn-background-color;
+                transform: skew(5deg);
+                transition: all .275s;
+        
+                &:after, &:before {
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    background: $btn-background-color;
+                    transition: all .275s;
+                }
+        
+                &:after {
+                    transform: translateY(-12px) translateX(-2px) skew(-20deg);
+                }
+        
+                &:before {
+                    transform: translateY(-16px) skew(-10deg);
+                }
+            }
+        
+            &.is-open {
+                .burger {
+                    transform: skew(5deg) translateY(-8px) rotate(-45deg);
+        
+                    &:before {
+                        transform: translateY(0px) skew(-10deg) rotate(75deg);
+                    }
+        
+                    &:after {
+                        transform: translateY(-12px) translateX(10px) skew(-20deg);
+                        opacity: 0;
+                    }
+                }
+            }
+        
+            .burger-text {
+                display: block;
+                font-size: .675rem;
+                letter-spacing: .05em;
+                margin-top: .5em;
+                text-transform: uppercase;
+                font-weight: 500;
+                text-align: center;
+                color: $btn-background-color;
+            }
+        }
+
+          
     }
- 
+    
     /***** End Header Styles *****/
 
 
@@ -410,4 +417,46 @@ body {
             }
         }
     }
+
+    @media (min-width: 993px) {
+        width: auto;
+            .navbar {
+                position: fixed;
+                // z-index: 1001;
+                width: 100%;
+                background-color: white;
+                height: 10vh; /* Adjust this value according to your design */
+                top: 0;
+
+                .main-nav {
+                // position: static;
+                // text-align: center;
+                // background: none;
+                // opacity: 1;
+                // z-index: auto;
+                visibility: visible;
+                // transition: none;
+                }
+                .open-main-nav{
+                    display: none;
+                }
+            }
+        
+           
+        
+                /* Other styles for the main navigation links */
+                // ul {
+                //     flex-direction: row; /* Display the links in a row for desktop view */
+                //     li {
+                //         margin: 0 3rem; /* Adjust the margin between links as needed */
+                //         height: auto;
+                //         flex-basis: 50%;
+                //     }
+                // }
+            // }
+            // .open-main-nav {
+            //     display: none; /* Hide the burger menu button in desktop view */
+            // }
+        }  
+    
 }

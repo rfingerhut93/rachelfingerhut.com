@@ -52,7 +52,7 @@ body .navbar {
   height: 60px;
   top: 0;
 }
-body .main-nav {
+body .navbar .main-nav {
   position: absolute;
   top: 0;
   right: 0;
@@ -65,16 +65,16 @@ body .main-nav {
   visibility: hidden;
   transition: all 0.375s;
 }
-body .main-nav .selected {
+body .navbar .main-nav .selected {
   color: #F25757;
 }
-body .main-nav.is-open {
+body .navbar .main-nav.is-open {
   opacity: 1;
   z-index: 100;
   visibility: visible;
   background-color: white;
 }
-body .main-nav.is-open::before {
+body .navbar .main-nav.is-open::before {
   content: "";
   position: fixed;
   top: 0;
@@ -84,7 +84,7 @@ body .main-nav.is-open::before {
   background: rgba(255, 255, 255, 0.95);
   z-index: -1;
 }
-body .main-nav ul {
+body .navbar .main-nav ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -94,13 +94,13 @@ body .main-nav ul {
   justify-content: flex-start;
   transform: translateY(50%);
 }
-body .main-nav ul li {
+body .navbar .main-nav ul li {
   text-align: center;
   margin: 0.5rem 0;
   width: 100%;
   height: 5vh;
 }
-body .main-nav a {
+body .navbar .main-nav a {
   display: block;
   padding: 12px 0;
   color: #595FD9;
@@ -109,7 +109,7 @@ body .main-nav a {
   font-weight: bold;
   width: 100%;
 }
-body .open-main-nav {
+body .navbar .open-main-nav {
   position: absolute;
   top: 15px;
   padding-top: 20px;
@@ -119,10 +119,10 @@ body .open-main-nav {
   border: 0;
   cursor: pointer;
 }
-body .open-main-nav:focus {
+body .navbar .open-main-nav:focus {
   outline: none;
 }
-body .open-main-nav .burger {
+body .navbar .open-main-nav .burger {
   position: relative;
   display: block;
   width: 28px;
@@ -132,30 +132,30 @@ body .open-main-nav .burger {
   transform: skew(5deg);
   transition: all 0.275s;
 }
-body .open-main-nav .burger:after, body .open-main-nav .burger:before {
+body .navbar .open-main-nav .burger:after, body .navbar .open-main-nav .burger:before {
   content: "";
   display: block;
   height: 100%;
   background: #595FD9;
   transition: all 0.275s;
 }
-body .open-main-nav .burger:after {
+body .navbar .open-main-nav .burger:after {
   transform: translateY(-12px) translateX(-2px) skew(-20deg);
 }
-body .open-main-nav .burger:before {
+body .navbar .open-main-nav .burger:before {
   transform: translateY(-16px) skew(-10deg);
 }
-body .open-main-nav.is-open .burger {
+body .navbar .open-main-nav.is-open .burger {
   transform: skew(5deg) translateY(-8px) rotate(-45deg);
 }
-body .open-main-nav.is-open .burger:before {
+body .navbar .open-main-nav.is-open .burger:before {
   transform: translateY(0px) skew(-10deg) rotate(75deg);
 }
-body .open-main-nav.is-open .burger:after {
+body .navbar .open-main-nav.is-open .burger:after {
   transform: translateY(-12px) translateX(10px) skew(-20deg);
   opacity: 0;
 }
-body .open-main-nav .burger-text {
+body .navbar .open-main-nav .burger-text {
   display: block;
   font-size: 0.675rem;
   letter-spacing: 0.05em;
@@ -385,4 +385,23 @@ body main #contact-container #submit-btn {
   height: 6vh;
   font-size: 1.4rem;
   font-family: monospace;
+}
+@media (min-width: 993px) {
+  body {
+    width: auto;
+    /* Other styles for the main navigation links */
+  }
+  body .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    height: 10vh; /* Adjust this value according to your design */
+    top: 0;
+  }
+  body .navbar .main-nav {
+    visibility: visible;
+  }
+  body .navbar .open-main-nav {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
