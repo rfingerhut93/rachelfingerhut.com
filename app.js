@@ -47,7 +47,7 @@ burger.addEventListener('click', function(e){
 
 /** Selected menu option effect */
 // Get all menu links
-const menuLinks = document.querySelectorAll('.main-nav a');
+const menuLinks = document.querySelectorAll('.main-nav li');
 
 // Add click event listener to each link
 menuLinks.forEach(link => {
@@ -82,6 +82,11 @@ document.getElementById("contact-button").addEventListener("click", function() {
 document.getElementById("projects-button").addEventListener("click", function() {
   scrollToContainer("projects-container");
 });
+
+document.getElementById("contact-menu-button").addEventListener("click", function() {
+  scrollToContainer("contact-container");
+});
+
 
 /**
  * sending email responses
