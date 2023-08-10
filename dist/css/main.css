@@ -104,6 +104,7 @@ body .navbar .main-nav ul li {
   font-size: 2rem;
   font-weight: bold;
   width: 100%;
+  cursor: pointer;
 }
 body .navbar .open-main-nav {
   position: absolute;
