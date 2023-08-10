@@ -64,16 +64,30 @@ menuLinks.forEach(link => {
     });
 });
 
+
 /** Removing id from url after button click */
 function scrollToContainer(containerId) {
   var container = document.getElementById(containerId);
+  var navbarHeight = document.getElementById('main-nav').offsetHeight; // Replace 'main-nav' with your actual navbar ID
+
   if (container) {
-      container.scrollIntoView();
+      var rect = container.getBoundingClientRect();
+      var scrollY = rect.top + window.scrollY - navbarHeight;
+
+      // Calculate the additional offset (adjust as needed)
+      var additionalOffset = -10;
+
+      window.scrollTo({
+          top: scrollY + additionalOffset,
+          behavior: 'smooth'
+      });
+
       if (window.history && window.history.replaceState) {
           history.replaceState(null, null, window.location.pathname + window.location.search);
       }
   }
 }
+
 
 document.getElementById("contact-button").addEventListener("click", function() {
   scrollToContainer("contact-container");
@@ -86,7 +100,6 @@ document.getElementById("projects-button").addEventListener("click", function() 
 document.getElementById("contact-menu-button").addEventListener("click", function() {
   scrollToContainer("contact-container");
 });
-
 
 /**
  * sending email responses
