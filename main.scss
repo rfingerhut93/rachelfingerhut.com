@@ -308,11 +308,13 @@ body {
             }
     
             /** REMOVE FOR MOBILE **/
-            .card:hover{
-                cursor: pointer;
-                transform: scale(1.05);
-                margin: 10px auto;
-                box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+            @media (min-width: 993px){
+                .card:hover{
+                    cursor: pointer;
+                    transform: scale(1.05);
+                    margin: 10px auto;
+                    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+                }
             }
         }
         
