@@ -248,9 +248,9 @@ body main #projects-container .card {
      object-fit: contain;
   margin: 20px 0;
   align-items: center;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
   overflow: hidden;
   border: 0.1px solid rgb(221, 221, 221);
 }
