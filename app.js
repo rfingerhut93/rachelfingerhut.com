@@ -64,6 +64,25 @@ menuLinks.forEach(link => {
     });
 });
 
+/** Removing id from url after button click */
+function scrollToContainer(containerId) {
+  var container = document.getElementById(containerId);
+  if (container) {
+      container.scrollIntoView();
+      if (window.history && window.history.replaceState) {
+          history.replaceState(null, null, window.location.pathname + window.location.search);
+      }
+  }
+}
+
+document.getElementById("contact-button").addEventListener("click", function() {
+  scrollToContainer("contact-container");
+});
+
+document.getElementById("projects-button").addEventListener("click", function() {
+  scrollToContainer("projects-container");
+});
+
 /**
  * sending email responses
  */
