@@ -33,14 +33,17 @@ html {
   color: #0D0D0D;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  height: 98vh;
+  overflow-y: auto;
 }
 
 body {
   background-color: white;
   margin: 0 auto;
   padding: 5px;
-  width: auto;
+  width: 100%;
   width: 375px;
+  height: 100%;
   /***** Start Header Styles *****/
   /***** End Header Styles *****/
 }
@@ -165,6 +168,7 @@ body .navbar .open-main-nav .burger-text {
 body main {
   padding-top: 10vh;
   margin-bottom: 10vh;
+  padding-bottom: 50vh;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -196,7 +200,7 @@ body main #text-container {
   background-color: white;
   margin: 0 auto;
   padding: 5px;
-  width: auto;
+  width: 100%;
 }
 body main #text-container p {
   margin-top: 10px;
@@ -210,8 +214,8 @@ body main #languages-container {
   background-color: white;
   margin: 0 auto;
   padding: 5px;
-  width: auto;
-  margin-bottom: 5vh;
+  width: 100%;
+  padding-bottom: 5vh;
   border-top: solid;
   border-bottom: solid;
 }
@@ -236,7 +240,7 @@ body main #projects-container {
   background-color: white;
   margin: 0 auto;
   padding: 5px;
-  width: auto;
+  width: 100%;
   margin-bottom: 5vh;
   /** REMOVE FOR MOBILE **/
 }
@@ -291,9 +295,9 @@ body main #btn-container {
   background-color: white;
   margin: 0 auto;
   padding: 5px;
-  width: auto;
+  width: 100%;
   margin-top: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   width: 100%;
 }
 body main #btn-container .btn {
@@ -357,9 +361,11 @@ body main #contact-container {
   background-color: white;
   margin: 0 auto;
   padding: 5px;
-  width: auto;
-  margin: 20px 0;
   width: 100%;
+  margin: 20px 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 370px;
 }
 body main #contact-container p {
   margin-bottom: 15px;

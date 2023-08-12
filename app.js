@@ -101,36 +101,18 @@ document.getElementById("contact-menu-button").addEventListener("click", functio
   scrollToContainer("contact-container");
 });
 
-/**
- * sending email responses
- */
-document.getElementById('form').addEventListener('submit', function (e) {
-  e.preventDefault(); // Prevent the form from submitting normally
 
-  // Perform an AJAX request to your PHP script
-  fetch('send_email.php', {
-      method: 'POST',
-      body: new FormData(e.target)
-  })
-  .then(response => response.json())
-  .then(data => {
-      if (data.success) {
-          // Show a pop-up message indicating success
-          alert('Thank you! Your message was successfully sent.');
-      } else {
-          // Show a pop-up message indicating an error
-          alert('An error occurred. Please try again later.');
-      }
-  })
-  .catch(error => {
-      console.error('Error:', error);
-  });
+
+const contactContainer = document.getElementById('contact-container');
+
+setupIntersectionObserver(contactContainer, function() {
+  contactContainer.classList.add('active');
 });
 
 /**
  * Contact button
  */
-const contactBtn = document.getElementById('contact-btn');
+const contactBtn = document.getElementById('contact-button');
 let isClicked = false;
 contactBtn.addEventListener('click', function(){
   isClicked = !isClicked;
@@ -139,47 +121,34 @@ contactBtn.addEventListener('click', function(){
   }
 });
 
-/**
- * Contact form clear
- */
-document.addEventListener("DOMContentLoaded", function() {
-  const contactForm = document.getElementById("form");
+// Contact form submission
+const contactForm = document.getElementById('form');
 
-  contactForm.addEventListener("submit", function(event) {
-      event.preventDefault();
+contactForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  console.log('Form submitted'); // Debugging statement
 
-      const formData = new FormData(contactForm);
+  const formData = new FormData(contactForm);
+  console.log('Form data:', formData); // Debugging statement
 
-      fetch("send_email.php", {
-          method: "POST",
-          body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-          if (data.success) {
-              // Clear the form fields
-              contactForm.reset();
-              // Optionally, display a success message to the user
-          } else {
-              // Display an error message to the user
-              console.error(data.message);
-          }
-      })
-      .catch(error => {
-          console.error("An error occurred:", error);
-      });
-  });
+  fetch('./send_email.php', {
+    method: 'POST',
+    body: formData,
+  })
+    .then(response => response.json())
+   .then(data => {
+    if (data.success) {
+        // Clear the form fields
+        contactForm.reset();
+        // Display a custom success message
+        alert("Form submitted successfully!");
+    } else {
+        // Display a custom error message
+        alert("Error submitting form.");
+    }
+})
+    .catch(error => {
+      console.error('An error occurred:', error);
+    });
 });
-
-
-
-
-
-
-
-
-
-
-
-
 

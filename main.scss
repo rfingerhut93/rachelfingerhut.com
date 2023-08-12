@@ -5,7 +5,7 @@
     background-color: $body-background;
     margin: 0 auto;
     padding: 5px;
-    width: auto;
+    width: 100%;
 }
 
 @mixin button-style{
@@ -23,11 +23,14 @@ html {
     color: $text-color;
     font-family: $font;
     font-weight: 400;
+    height: 98vh;
+    overflow-y: auto;
 }
 
 body {
     @include container;
     width: 375px;
+    height: 100%;
 
     // @media (min-width: 993px) {
     //     width: auto;
@@ -184,11 +187,10 @@ body {
     main {
         padding-top: 10vh;
         margin-bottom: 10vh;
+        padding-bottom: 50vh;
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-content: center;
-        // min-height: 98vh;
         background-color: $body-background;
 
         h1{
@@ -233,7 +235,7 @@ body {
 
         #languages-container {
             @include container;
-            margin-bottom: 5vh;
+            padding-bottom: 5vh;
             border-top: solid;
             border-bottom: solid;
 
@@ -321,7 +323,7 @@ body {
         #btn-container{
             @include container;
             margin-top: 30px;
-            margin-bottom: 30px;
+            padding-bottom: 30px;
             width: 100%;
 
             .btn{
@@ -389,7 +391,9 @@ body {
         #contact-container{
             @include container;
             margin: 20px 0;
+            bottom: 0;
             width: 100%;
+            max-width: 370px;
 
             p{
                 margin-bottom: 15px;
