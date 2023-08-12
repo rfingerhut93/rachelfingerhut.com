@@ -44,8 +44,6 @@ body {
   width: 100%;
   width: 375px;
   height: 100%;
-  /***** Start Header Styles *****/
-  /***** End Header Styles *****/
 }
 body .navbar {
   position: fixed;
@@ -100,7 +98,6 @@ body .navbar .main-nav ul {
 body .navbar .main-nav ul li {
   text-align: center;
   margin: 0.5rem 0;
-  width: 100%;
   height: 5vh;
   padding: 12px 0;
   color: #595FD9;
@@ -196,14 +193,15 @@ body main .emphasize {
   font-weight: 700;
   color: #F25757;
 }
-body main #text-container {
+body main #text-container, body main #languages-container, body main #projects-container, body main #btn-container, body main #contact-container {
   background-color: white;
   margin: 0 auto;
   padding: 5px;
   width: 100%;
+  margin: 20px 0;
 }
-body main #text-container p {
-  margin-top: 10px;
+body main #text-container p, body main #languages-container p, body main #projects-container p, body main #btn-container p, body main #contact-container p {
+  margin-bottom: 15px;
 }
 body main #text-container h2 {
   font-weight: 300;
@@ -211,10 +209,6 @@ body main #text-container h2 {
   font-size: 1.45rem;
 }
 body main #languages-container {
-  background-color: white;
-  margin: 0 auto;
-  padding: 5px;
-  width: 100%;
   padding-bottom: 5vh;
   border-top: solid;
   border-bottom: solid;
@@ -237,12 +231,7 @@ body main #languages-container .card i {
   font-size: 3rem;
 }
 body main #projects-container {
-  background-color: white;
-  margin: 0 auto;
-  padding: 5px;
-  width: 100%;
   margin-bottom: 5vh;
-  /** REMOVE FOR MOBILE **/
 }
 body main #projects-container p {
   margin-bottom: 15px;
@@ -292,10 +281,6 @@ body main #projects-container .card .card-img {
   }
 }
 body main #btn-container {
-  background-color: white;
-  margin: 0 auto;
-  padding: 5px;
-  width: 100%;
   margin-top: 30px;
   padding-bottom: 30px;
   width: 100%;
@@ -358,13 +343,7 @@ body main #btn-container .socials-container .svg-container svg {
   vertical-align: top;
 }
 body main #contact-container {
-  background-color: white;
-  margin: 0 auto;
-  padding: 5px;
-  width: 100%;
-  margin: 20px 0;
   bottom: 0;
-  width: 100%;
   max-width: 370px;
 }
 body main #contact-container p {
@@ -394,13 +373,12 @@ body main #contact-container #submit-btn {
 @media (min-width: 993px) {
   body {
     width: auto;
-    /* Other styles for the main navigation links */
   }
   body .navbar {
     position: fixed;
     width: 100%;
     background-color: white;
-    height: 10vh; /* Adjust this value according to your design */
+    height: 10vh;
     top: 0;
   }
   body .navbar .main-nav {
