@@ -33,7 +33,7 @@ html {
   color: #0D0D0D;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  height: 98vh;
+  height: auto;
   overflow-y: auto;
 }
 
@@ -42,7 +42,8 @@ body {
   margin: 0 auto;
   padding: 5px;
   width: 100%;
-  width: 375px;
+  max-width: 375px;
+  width: 100%;
   height: 100%;
 }
 body .navbar {
@@ -162,6 +163,14 @@ body .navbar .open-main-nav .burger-text {
   text-align: center;
   color: #595FD9;
 }
+body footer {
+  height: auto;
+  z-index: 1;
+  width: 100%;
+}
+body footer span {
+  vertical-align: middle;
+}
 body main {
   padding-top: 10vh;
   margin-bottom: 10vh;
@@ -232,7 +241,6 @@ body main #languages-container .card i {
 }
 body main #projects-container {
   padding-top: 5vh;
-  margin-bottom: 5vh;
 }
 body main #projects-container p {
   margin-bottom: 15px;
@@ -344,11 +352,12 @@ body main #btn-container .socials-container .svg-container svg {
   vertical-align: top;
 }
 body main #contact-container {
-  bottom: 0;
+  bottom: 95px;
   left: auto;
   right: auto;
   max-width: 375px;
   padding-right: 15px;
+  z-index: 1;
 }
 body main #contact-container p {
   margin-bottom: 15px;
