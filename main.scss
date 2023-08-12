@@ -27,13 +27,14 @@ html {
     color: $text-color;
     font-family: $font;
     font-weight: 400;
-    height: 98vh;
+    height: auto;
     overflow-y: auto;
   }
   
   body {
     @include container;
-    width: 375px;
+    max-width: 375px;
+    width: 100%;
     height: 100%;
   
     .navbar {
@@ -171,6 +172,16 @@ html {
         }
       }
     }
+
+    footer{
+        height: auto;
+        z-index: 1;
+        width: 100%;
+        border-radius: 5px;
+        span{
+            vertical-align: middle;
+        }
+    }
   
     main {
       padding-top: 10vh;
@@ -252,7 +263,7 @@ html {
   
       #projects-container {
         padding-top: 5vh;
-        margin-bottom: 5vh;
+        // margin-bottom: 5vh;
   
         p {
           margin-bottom: 15px;
@@ -376,11 +387,12 @@ html {
       }
   
       #contact-container {
-        bottom: 0;
+        bottom: 95px;
         left:auto;
         right: auto;
         max-width: 375px;
         padding-right: 15px;
+        z-index: 1;
   
         p {
           margin-bottom: 15px;
