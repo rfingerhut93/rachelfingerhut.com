@@ -18,9 +18,6 @@
     font-family: monospace;
 }
 
-// Import your Sass files here
-
-// Define mixins and variables here
 
 html {
     background-color: $body-background;
@@ -190,6 +187,7 @@ html {
       flex-direction: column;
       align-content: center;
       background-color: $body-background;
+      height: 2469.55px;
   
       h1 {
         font-size: 2rem;
