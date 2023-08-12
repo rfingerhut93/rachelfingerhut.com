@@ -198,7 +198,7 @@ body main #text-container, body main #languages-container, body main #projects-c
   margin: 0 auto;
   padding: 5px;
   width: 100%;
-  margin: 20px 0;
+  padding: 10px 5px;
 }
 body main #text-container p, body main #languages-container p, body main #projects-container p, body main #btn-container p, body main #contact-container p {
   margin-bottom: 15px;
@@ -231,6 +231,7 @@ body main #languages-container .card i {
   font-size: 3rem;
 }
 body main #projects-container {
+  padding-top: 5vh;
   margin-bottom: 5vh;
 }
 body main #projects-container p {
@@ -281,7 +282,7 @@ body main #projects-container .card .card-img {
   }
 }
 body main #btn-container {
-  margin-top: 30px;
+  padding-top: 30px;
   padding-bottom: 30px;
   width: 100%;
 }
@@ -344,7 +345,10 @@ body main #btn-container .socials-container .svg-container svg {
 }
 body main #contact-container {
   bottom: 0;
-  max-width: 370px;
+  left: auto;
+  right: auto;
+  max-width: 375px;
+  padding-right: 15px;
 }
 body main #contact-container p {
   margin-bottom: 15px;

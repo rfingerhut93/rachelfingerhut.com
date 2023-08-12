@@ -76,18 +76,9 @@ function scrollToContainer(containerId) {
   }
 }
 
-
-// document.getElementById("contact-button").addEventListener("click", function() {
-//   scrollToContainer("contact-container");
-// });
-
 document.getElementById("projects-button").addEventListener("click", function() {
   scrollToContainer("projects-container");
 });
-
-// document.getElementById("contact-menu-button").addEventListener("click", function() {
-//   scrollToContainer("contact-container");
-// });
 
 const contactBtns = document.getElementsByClassName("contact-btn"); 
 for (const contactBtn of contactBtns){
