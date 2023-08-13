@@ -101,7 +101,7 @@ contactForm.addEventListener('submit', function(event) {
   const formData = new FormData(contactForm);
   console.log('Form data:', formData);
 
-  fetch('./send_email.php', {
+  fetch('../php/send_email.php', {
     method: 'POST',
     body: formData,
   })
