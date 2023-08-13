@@ -33,6 +33,7 @@ html {
     max-width: 375px;
     width: 100%;
     height: 100%;
+  }
   
     .navbar {
       position: fixed;
@@ -417,7 +418,9 @@ html {
     }
   
     @media (min-width: 993px) {
-      width: auto;
+      body{
+        width: auto;
+      }
       .navbar {
         position: fixed;
         width: 100%;
@@ -434,5 +437,5 @@ html {
         }
       }
     }
-  }
+  
   
