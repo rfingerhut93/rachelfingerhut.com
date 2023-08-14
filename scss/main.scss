@@ -193,6 +193,7 @@ html {
       align-content: center;
       background-color: $body-background;
       height: 2469.55px;
+      z-index: 5;
   
       h1 {
         font-size: 2rem;
@@ -273,6 +274,7 @@ html {
               font-size: 6rem;
               line-height: 90%;
               padding-bottom: 2vh;
+              text-align: left;
             }
             h2{
               font-size: 1.8rem;
@@ -471,6 +473,7 @@ html {
           #project-cards{
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             gap: 10px;
 
             .card {
@@ -553,6 +556,7 @@ html {
 
       /** MAIN DESKTOP VIEW **/
       @media (min-width: 993px){
+        height: auto;
         #form-container{
           display: flex;
           flex-direction: row;

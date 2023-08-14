@@ -189,6 +189,7 @@ main {
   align-content: center;
   background-color: white;
   height: 2469.55px;
+  z-index: 5;
   /** MAIN DESKTOP VIEW **/
 }
 main h1 {
@@ -265,6 +266,7 @@ main #top #image-container img {
     font-size: 6rem;
     line-height: 90%;
     padding-bottom: 2vh;
+    text-align: left;
   }
   main #top #text-container h2 {
     font-size: 1.8rem;
@@ -447,6 +449,7 @@ main #projects-container .card .card-img {
   main #projects-container #project-cards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
   }
   main #projects-container #project-cards .card {
@@ -523,6 +526,9 @@ main #contact-container #submit-btn {
   }
 }
 @media (min-width: 993px) {
+  main {
+    height: auto;
+  }
   main #form-container {
     display: flex;
     flex-direction: row;
