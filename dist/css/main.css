@@ -50,7 +50,6 @@ body {
   body {
     max-width: 1440px;
     width: 80%;
-    height: 1000vh;
   }
 }
 
@@ -190,6 +189,7 @@ main {
   align-content: center;
   background-color: white;
   height: 2469.55px;
+  /** MAIN DESKTOP VIEW **/
 }
 main h1 {
   font-size: 2rem;
@@ -467,6 +467,7 @@ main #contact-container {
   padding-right: 15px;
   z-index: 1;
   position: fixed !important;
+  /** CONTACT CONTAINER DESKTOP VIEW **/
 }
 main #contact-container p {
   margin-bottom: 15px;
@@ -494,10 +495,15 @@ main #contact-container #submit-btn {
 }
 @media (min-width: 993px) {
   main #contact-container {
-    position: inherit;
+    background-color: white;
+    margin: 0 auto;
+    padding: 5px;
+    width: 100%;
+    position: static !important;
+    max-width: 100%;
+    padding-top: 10vh;
   }
 }
-
 @media (min-width: 993px) {
   .navbar {
     position: fixed;

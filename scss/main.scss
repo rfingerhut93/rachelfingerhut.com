@@ -36,7 +36,6 @@ html {
     @media (min-width: 993px) {
         max-width: 1440px;
         width: 80%;
-        height: 1000vh; //CHANGE THIS AFTER FIGURING SOMETHING OUT :')
     }
   }
   
@@ -262,7 +261,7 @@ html {
           flex-direction: row;
           justify-content: space-around;
           z-index: 1;
-          
+
           #text-container{
             flex-basis: 40%;
             align-self: center;
@@ -483,7 +482,7 @@ html {
                   margin-top: 10px;
                 }
               }
-          }
+            }
           }
         }
       }
@@ -521,9 +520,18 @@ html {
           @include button-style;
         }
 
+        /** CONTACT CONTAINER DESKTOP VIEW **/
         @media (min-width: 993px){
-          position: inherit;
+         @include container;
+          position: static !important;
+          max-width: 100%;
+          padding-top: 10vh;
         }
+      }
+
+      /** MAIN DESKTOP VIEW **/
+      @media (min-width: 993px){
+        
       }
     }
   
@@ -543,7 +551,6 @@ html {
           display: none;
         }
       }
-    
     }
   
   

@@ -37,14 +37,14 @@
 
  <!-- Main Content  -->   
     <main>
-      <div id="top" style="z-index: 100;">
+      <div id="top">
         <div id="text-container" >
             <h1 class="emphasize">Hello! <span style="font-weight: 300;">I'm Rachel,</span></h1>
             <h2>a <span id="web-developer">website developer</span> based in Washington.</h2>
             <p>Welcome to my world of web design! I am passionate about crafting accessible and custom websites.</p>
 
           <!-- SOCIALS AND CONTACT BUTTON-->
-          <div id="btn-container" style="z-index: 100;">
+          <div id="btn-container">
             <div class="socials-container">
               <div class="social-icon">
                 <a href="https://github.com/rfingerhut93" class="social-icon-link" target="_blank">
@@ -75,7 +75,7 @@
       </div>
 
       <!-- LANGUAGES SECTION-->
-      <div id="languages-container" style="z-index: 100;">
+      <div id="languages-container">
           <div class="row">
             <div class="col-4">
               <div class="card">
@@ -130,7 +130,7 @@
       <!-- END LANGUAGES SECTION -->
 
       <!-- PROJECTS SECTION -->
-      <div id="projects-container" style="z-index: 100;">
+      <div id="projects-container">
         <h2><span id="project-title">Projects</span></h2>
         <p>Check out some of my current work!</p>
         <div id="project-cards">
@@ -159,31 +159,32 @@
       </div>
       <!-- END PROJECTS SECTION -->
 
-      <!-- CONTACT FORM -->
-      <div id="contact-container">
-        <h2><span id="contact-title">Contact</span></h2>
-        <h3>Get in touch today!</h3>
-        <form id="form" action="/send_email.php" method="post">
-          <div class="mb-4">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="First and Last Name" required>
+      <div id="form-container">
+        <!-- CONTACT FORM -->
+        <div id="contact-container">
+          <h2><span id="contact-title">Contact</span></h2>
+          <h3>Get in touch today!</h3>
+          <form id="form" action="/send_email.php" method="post">
+            <div class="mb-4">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="First and Last Name" required>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="Email Address" placeholder="abc@mail.com" required>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" name="message" id="message" rows="3" spellcheck="true" required></textarea>
+            </div>
+            <div class="mb-4">
+              <button id="submit-btn" type="submit" class="btn btn-primary" value="send">Submit</button>
+            </form>
           </div>
-          <div class="mb-4">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" id="email" aria-describedby="Email Address" placeholder="abc@mail.com" required>
-          </div>
-          <div class="mb-4">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" name="message" id="message" rows="3" spellcheck="true" required></textarea>
-          </div>
-          <div class="mb-4">
-            <button id="submit-btn" type="submit" class="btn btn-primary" value="send">Submit</button>
-          </form>
         </div>
+        <!-- END CONTACT FORM -->
       </div>
-      <!-- END CONTACT FORM -->
-
-
+      
   </main>
   
   <!-- Footer -->
