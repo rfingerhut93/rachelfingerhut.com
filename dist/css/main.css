@@ -214,7 +214,7 @@ main #text-container, main #languages-container, main #projects-container, main 
   margin: 0 auto;
   padding: 5px;
   width: 100%;
-  padding: 10px 5px;
+  padding: 10px 10px;
 }
 main #text-container p, main #languages-container p, main #projects-container p, main #btn-container p, main #contact-container p {
   margin-bottom: 15px;
@@ -228,6 +228,8 @@ main #text-container p, main #languages-container p, main #projects-container p,
 }
 main #top {
   z-index: 100;
+  /** MOBILE VIEW **/
+  /** TOP SECTION DESKTOP VIEW **/
 }
 main #top #text-container h2 {
   font-weight: 300;
@@ -252,6 +254,7 @@ main #top #image-container img {
     flex-direction: row;
     justify-content: space-around;
     z-index: 1;
+    padding-bottom: 15vh;
   }
   main #top #text-container {
     flex-basis: 40%;
@@ -285,6 +288,7 @@ main #btn-container {
   padding-top: 30px;
   padding-bottom: 30px;
   width: 100%;
+  /** BUTTON CONTAINER DESKTOP VIEW **/
 }
 main #btn-container .btn {
   width: 100%;
@@ -362,6 +366,7 @@ main #languages-container {
   padding-bottom: 5vh;
   border-top: solid;
   border-bottom: solid;
+  /** LANGUAGE CONTAINER DESKTOP VIEW **/
 }
 main #languages-container .card {
   margin-bottom: 5px;
@@ -383,6 +388,13 @@ main #languages-container .card i {
 @media (min-width: 993px) {
   main #languages-container {
     z-index: 1;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: rgba(0, 0, 0, 0.11);
+    border: none;
+  }
+  main #languages-container .card {
+    margin: 1vh 0;
   }
 }
 main #projects-container {
@@ -459,6 +471,9 @@ main #projects-container .card .card-img {
     margin-top: 10px;
   }
 }
+main #contact-img-container {
+  display: none;
+}
 main #contact-container {
   bottom: 95px;
   left: auto;
@@ -501,9 +516,29 @@ main #contact-container #submit-btn {
     width: 100%;
     position: static !important;
     max-width: 100%;
-    padding-top: 10vh;
+    padding-top: 5vh;
+  }
+  main #contact-container h3 {
+    font-size: 1.6rem;
   }
 }
+@media (min-width: 993px) {
+  main #form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+  main #form-container #contact-img-container {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    margin-left: 5vh;
+  }
+  main #form-container #contact-img-container object {
+    width: 100%;
+  }
+}
+
 @media (min-width: 993px) {
   .navbar {
     position: fixed;

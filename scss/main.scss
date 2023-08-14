@@ -217,7 +217,7 @@ html {
   
       #text-container, #languages-container, #projects-container, #btn-container, #contact-container {
         @include container;
-        padding: 10px 5px;
+        padding: 10px 10px;
   
         p {
           margin-bottom: 15px;
@@ -250,17 +250,20 @@ html {
           }
         }
 
+        /** MOBILE VIEW **/
         @media (max-width: 992px){
           #image-container{
             display: none;
           }
         }
         
+        /** TOP SECTION DESKTOP VIEW **/
         @media (min-width: 993px) {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
           z-index: 1;
+          padding-bottom: 15vh;
 
           #text-container{
             flex-basis: 40%;
@@ -358,6 +361,8 @@ html {
             }
           }
         }
+
+        /** BUTTON CONTAINER DESKTOP VIEW **/
         @media (min-width: 993px){
           padding-top: 5vh;
           display: flex;
@@ -398,8 +403,18 @@ html {
             font-size: 3rem;
           }
         }
+
+        /** LANGUAGE CONTAINER DESKTOP VIEW **/
         @media (min-width: 993px){
           z-index: 1;
+          padding-top: 5vh;
+          padding-bottom: 5vh;
+          background-color: rgba(0, 0, 0, 0.11);
+          border: none;
+
+          .card{
+            margin: 1vh 0;
+          }
         }
       }
   
@@ -486,8 +501,11 @@ html {
           }
         }
       }
+
+      #contact-img-container{
+        display: none;
+      }
   
-    
       #contact-container {
         bottom: 95px;
         left:auto;
@@ -525,13 +543,30 @@ html {
          @include container;
           position: static !important;
           max-width: 100%;
-          padding-top: 10vh;
+          padding-top: 5vh;
+
+          h3{
+            font-size: 1.6rem;
+          }
         }
       }
 
       /** MAIN DESKTOP VIEW **/
       @media (min-width: 993px){
-        
+        #form-container{
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          #contact-img-container{
+            display:flex;
+            align-self: center;
+            width: 100%;
+            margin-left: 5vh;
+            object{
+              width: 100%;
+            }
+          }
+        }
       }
     }
   
