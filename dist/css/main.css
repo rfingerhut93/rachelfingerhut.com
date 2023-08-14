@@ -231,6 +231,9 @@ main #top #text-container h2 {
   color: currentColor;
   font-size: 1.45rem;
 }
+main #top #img-container {
+  display: none;
+}
 @media (min-width: 993px) {
   main #top {
     display: flex;
@@ -251,9 +254,8 @@ main #top #text-container h2 {
   main #top #text-container p {
     font-weight: 300;
   }
-  main #top img {
-    display: inline-block;
-    padding-bottom: 2vh;
+  main #top #img-container {
+    display: contents;
   }
 }
 main #btn-container {
@@ -317,6 +319,19 @@ main #btn-container .socials-container .svg-container svg {
   width: 2.7rem;
   height: auto;
   vertical-align: top;
+}
+@media (min-width: 993px) {
+  main #btn-container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main #btn-container #contact-button {
+    height: 60px;
+    width: 50%;
+  }
 }
 main #languages-container {
   padding-bottom: 5vh;

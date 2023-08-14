@@ -240,6 +240,9 @@ html {
             font-size: 1.45rem;
           } 
         }
+        #img-container{
+          display: none;
+        }
 
         @media (min-width: 993px) {
           display: flex;
@@ -260,10 +263,8 @@ html {
               font-weight: 300;
             }
           }
-  
-          img{
-            display: inline-block;
-            padding-bottom: 2vh;
+          #img-container{
+            display: contents;
           }
         }
       }
@@ -331,6 +332,18 @@ html {
               height: auto;
               vertical-align: top;
             }
+          }
+        }
+        @media (min-width: 993px){
+          padding-top: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        
+          #contact-button {
+            height: 60px;
+            width: 50%;
           }
         }
       }
