@@ -262,33 +262,29 @@ html {
         @media (min-width: 993px) {
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
           z-index: 1;
           padding-bottom: 10vh;
 
           #text-container{
-            flex-basis: 40%;
-            align-self: center;
-            text-align: center;
+            flex-basis: 60%;
+            margin: 0;
             h1{
-              font-size: 6rem;
+              font-size: 9rem;
               line-height: 90%;
               padding-bottom: 2vh;
-              text-align: left;
             }
             h2{
               font-size: 1.8rem;
-              text-align: left;
             }
             p{
               font-weight: 300;
-              text-align: left;
             }
           }
 
           #image-container{
             align-self: center;
-            flex-basis: 45%;
+            flex-basis: 40%;
+            margin: 0 auto;
             img{
               width: 100%;
               border-radius: 50%;

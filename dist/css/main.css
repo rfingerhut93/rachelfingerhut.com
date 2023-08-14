@@ -253,32 +253,28 @@ main #top #image-container img {
   main #top {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     z-index: 1;
     padding-bottom: 10vh;
   }
   main #top #text-container {
-    flex-basis: 40%;
-    align-self: center;
-    text-align: center;
+    flex-basis: 60%;
+    margin: 0;
   }
   main #top #text-container h1 {
-    font-size: 6rem;
+    font-size: 9rem;
     line-height: 90%;
     padding-bottom: 2vh;
-    text-align: left;
   }
   main #top #text-container h2 {
     font-size: 1.8rem;
-    text-align: left;
   }
   main #top #text-container p {
     font-weight: 300;
-    text-align: left;
   }
   main #top #image-container {
     align-self: center;
-    flex-basis: 45%;
+    flex-basis: 40%;
+    margin: 0 auto;
   }
   main #top #image-container img {
     width: 100%;
