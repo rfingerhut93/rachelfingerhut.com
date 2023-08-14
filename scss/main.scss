@@ -232,6 +232,7 @@ html {
           } 
         }
       }
+
       #top{
         #text-container {
           h2 {
@@ -240,17 +241,27 @@ html {
             font-size: 1.45rem;
           } 
         }
-        #img-container{
-          display: none;
+        
+        #image-container{
+          width: 100%;
+          img{
+            max-width: 100%;
+            height: auto;
+          }
         }
 
+        @media (max-width: 992px){
+          #image-container{
+            display: none;
+          }
+        }
+        
         @media (min-width: 993px) {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
           #text-container{
             flex-basis: 50%;
-
             h1{
               font-size: 6rem;
               line-height: 90%;
@@ -263,8 +274,13 @@ html {
               font-weight: 300;
             }
           }
-          #img-container{
-            display: contents;
+          #image-container{
+            flex-basis: 40%;
+            width: 80vh;
+            img{
+              width: 100%;
+              border-radius: 50%;
+            }
           }
         }
       }

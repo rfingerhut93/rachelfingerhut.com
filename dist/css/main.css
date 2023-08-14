@@ -231,8 +231,17 @@ main #top #text-container h2 {
   color: currentColor;
   font-size: 1.45rem;
 }
-main #top #img-container {
-  display: none;
+main #top #image-container {
+  width: 100%;
+}
+main #top #image-container img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 992px) {
+  main #top #image-container {
+    display: none;
+  }
 }
 @media (min-width: 993px) {
   main #top {
@@ -254,8 +263,13 @@ main #top #img-container {
   main #top #text-container p {
     font-weight: 300;
   }
-  main #top #img-container {
-    display: contents;
+  main #top #image-container {
+    flex-basis: 40%;
+    width: 80vh;
+  }
+  main #top #image-container img {
+    width: 100%;
+    border-radius: 50%;
   }
 }
 main #btn-container {
