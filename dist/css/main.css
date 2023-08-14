@@ -255,7 +255,7 @@ main #top #image-container img {
     flex-direction: row;
     justify-content: space-around;
     z-index: 1;
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
   }
   main #top #text-container {
     flex-basis: 40%;
@@ -445,6 +445,7 @@ main #projects-container .card .card-img {
 @media (min-width: 993px) {
   main #projects-container {
     z-index: 1;
+    padding-top: 10vh;
   }
   main #projects-container #project-cards {
     display: flex;
@@ -547,8 +548,11 @@ main #contact-container #submit-btn {
 
 @media (min-width: 993px) {
   .navbar {
-    position: fixed;
+    background-color: white;
+    margin: 0 auto;
+    padding: 5px;
     width: 100%;
+    position: fixed;
     background-color: white;
     height: 10vh;
     top: 0;

@@ -264,7 +264,7 @@ html {
           flex-direction: row;
           justify-content: space-around;
           z-index: 1;
-          padding-bottom: 15vh;
+          padding-bottom: 10vh;
 
           #text-container{
             flex-basis: 40%;
@@ -470,6 +470,8 @@ html {
   
         @media (min-width: 993px) {
           z-index: 1;
+          padding-top: 10vh;
+
           #project-cards{
             display: flex;
             flex-direction: row;
@@ -576,8 +578,8 @@ html {
   
     @media (min-width: 993px) {
       .navbar {
+        @include container;
         position: fixed;
-        width: 100%;
         background-color: white;
         height: 10vh;
         top: 0;
