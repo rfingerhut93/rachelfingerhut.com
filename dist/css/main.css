@@ -398,11 +398,31 @@ main #projects-container .card .card-img {
   border-radius: 0;
 }
 @media (min-width: 993px) {
-  main #projects-container .card:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    margin: 10px auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  main #projects-container #project-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  main #projects-container #project-cards .card {
+    flex: 1 0 calc(33.33% - 10px);
+    min-width: 300px;
+    padding: 20px;
+  }
+  main #projects-container #project-cards .card .card-text {
+    margin-bottom: 10px;
+  }
+  main #projects-container #project-cards .card .card-text .card-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  main #projects-container #project-cards .card .card-text .card-description {
+    margin: 0;
+  }
+  main #projects-container #project-cards .card .card-text .card-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
   }
 }
 main #contact-container {
