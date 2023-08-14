@@ -39,44 +39,42 @@
     <main>
       <div id="top" style="z-index: 100;">
         <div id="text-container" >
-          <div id="titleleft">
             <h1 class="emphasize">Hello! <span style="font-weight: 300;">I'm Rachel,</span></h1>
             <h2>a <span id="web-developer">website developer</span> based in Washington.</h2>
             <p>Welcome to my world of web design! I am passionate about crafting accessible and custom websites.</p>
-          </div>     
+
+          <!-- SOCIALS AND CONTACT BUTTON-->
+          <div id="btn-container" style="z-index: 100;">
+            <div class="socials-container">
+              <div class="social-icon">
+                <a href="https://github.com/rfingerhut93" class="social-icon-link" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rachel-fingerhut/" class="social-icon-link" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.freecodecamp.org/rfingerhut" class="social-icon-link" target="_blank">
+                  <i class="fa fa-free-code-camp"></i>
+                </a>
+                <a href="https://www.frontendmentor.io/profile/rfingerhut93" class="social-icon-link" target="_blank">
+                  <span class="svg-container">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="IconChangeColor" height="200" width="200"><title>Frontend Mentor</title><path d="M12.1706 1.2719a.732.732 0 00-.7186.732v13.914a.732.732 0 00.732.732.732.732 0 00.7318-.732V2.004a.732.732 0 00-.7452-.732zm11.0741 4.1685a.7339.7339 0 00-.2764.063L16.686 8.307a.7329.7329 0 000 1.3361l6.2823 2.8134a.7378.7378 0 00.2993.0648.732.732 0 00.2973-1.401l-4.786-2.1443 4.786-2.1366a.7339.7339 0 00.3698-.9664.7339.7339 0 00-.69-.4327zm-22.499 5.032a.7316.7316 0 00-.7223.9149c1.736 6.677 7.7748 11.341 14.6822 11.341a.732.732 0 000-1.464 13.7055 13.7055 0 01-13.266-10.2449.7316.7316 0 00-.6939-.547z" id="mainIconPathAttribute" stroke-width="1.3" stroke="#000000"></path></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <button type="button" name="" id="contact-button" class="btn contact-btn">
+              Contact Me
+            </button>
+          </div>  
+          <!-- END SOCIALS AND CONTACT BUTTON -->
         </div>
         <div id="image-container">
           <img src="./images/profilepicture.jpeg" alt="" style="width: 100%;">
         </div>
       </div>
 
-      <div id="btn-container" style="z-index: 100;">
-        <div class="socials-container">
-          <div class="social-icon">
-            <a href="https://github.com/rfingerhut93" class="social-icon-link" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rachel-fingerhut/" class="social-icon-link" target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.freecodecamp.org/rfingerhut" class="social-icon-link" target="_blank">
-              <i class="fa fa-free-code-camp"></i>
-            </a>
-            <a href="https://www.frontendmentor.io/profile/rfingerhut93" class="social-icon-link" target="_blank">
-              <span class="svg-container">
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="IconChangeColor" height="200" width="200"><title>Frontend Mentor</title><path d="M12.1706 1.2719a.732.732 0 00-.7186.732v13.914a.732.732 0 00.732.732.732.732 0 00.7318-.732V2.004a.732.732 0 00-.7452-.732zm11.0741 4.1685a.7339.7339 0 00-.2764.063L16.686 8.307a.7329.7329 0 000 1.3361l6.2823 2.8134a.7378.7378 0 00.2993.0648.732.732 0 00.2973-1.401l-4.786-2.1443 4.786-2.1366a.7339.7339 0 00.3698-.9664.7339.7339 0 00-.69-.4327zm-22.499 5.032a.7316.7316 0 00-.7223.9149c1.736 6.677 7.7748 11.341 14.6822 11.341a.732.732 0 000-1.464 13.7055 13.7055 0 01-13.266-10.2449.7316.7316 0 00-.6939-.547z" id="mainIconPathAttribute" stroke-width="1.3" stroke="#000000"></path></svg>
-              </span>
-            </a>
-          </div>
-        </div>
-        <button type="button" name="" id="contact-button" class="btn contact-btn">
-          Contact Me
-        </button>
-      </div>
-      
-
-      
-
+      <!-- LANGUAGES SECTION-->
       <div id="languages-container" style="z-index: 100;">
           <div class="row">
             <div class="col-4">
@@ -129,7 +127,9 @@
             </div>
           </div>
       </div>
+      <!-- END LANGUAGES SECTION -->
 
+      <!-- PROJECTS SECTION -->
       <div id="projects-container" style="z-index: 100;">
         <h2><span id="project-title">Projects</span></h2>
         <p>Check out some of my current work!</p>
@@ -157,8 +157,10 @@
           </div>
         </div>
       </div>
+      <!-- END PROJECTS SECTION -->
 
-      <div id="contact-container" class="position-fixed">
+      <!-- CONTACT FORM -->
+      <div id="contact-container">
         <h2><span id="contact-title">Contact</span></h2>
         <h3>Get in touch today!</h3>
         <form id="form" action="/send_email.php" method="post">
@@ -179,7 +181,7 @@
           </form>
         </div>
       </div>
-
+      <!-- END CONTACT FORM -->
 
 
   </main>

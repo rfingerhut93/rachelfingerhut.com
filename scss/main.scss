@@ -234,6 +234,7 @@ html {
       }
 
       #top{
+        z-index: 100;
         #text-container {
           h2 {
             font-weight: 300;
@@ -260,8 +261,12 @@ html {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
+          z-index: 1;
+          
           #text-container{
-            flex-basis: 50%;
+            flex-basis: 40%;
+            align-self: center;
+            text-align: center;
             h1{
               font-size: 6rem;
               line-height: 90%;
@@ -269,14 +274,17 @@ html {
             }
             h2{
               font-size: 1.8rem;
+              text-align: left;
             }
             p{
               font-weight: 300;
+              text-align: left;
             }
           }
+
           #image-container{
-            flex-basis: 40%;
-            width: 80vh;
+            align-self: center;
+            flex-basis: 45%;
             img{
               width: 100%;
               border-radius: 50%;
@@ -286,6 +294,7 @@ html {
       }
 
       #btn-container {
+        z-index: 100;
         padding-top: 30px;
         padding-bottom: 30px;
         width: 100%;
@@ -351,20 +360,22 @@ html {
           }
         }
         @media (min-width: 993px){
-          padding-top: 50px;
+          padding-top: 5vh;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
-        
+          z-index: 1;
+         
           #contact-button {
             height: 60px;
-            width: 50%;
+            width: 100%;
           }
         }
       }
   
       #languages-container {
+        z-index: 100;
         padding-bottom: 5vh;
         border-top: solid;
         border-bottom: solid;
@@ -388,9 +399,13 @@ html {
             font-size: 3rem;
           }
         }
+        @media (min-width: 993px){
+          z-index: 1;
+        }
       }
   
       #projects-container {
+        z-index: 100;
         padding-top: 5vh;
   
         p {
@@ -438,6 +453,7 @@ html {
         }
   
         @media (min-width: 993px) {
+          z-index: 1;
           #project-cards{
             display: flex;
             flex-direction: row;
@@ -469,22 +485,10 @@ html {
               }
           }
           }
-
-          
-
-
-
-          // .card:hover {
-          //   cursor: pointer;
-          //   transform: scale(1.05);
-          //   margin: 10px auto;
-          //   box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
-          // }
         }
       }
   
-      
-  
+    
       #contact-container {
         bottom: 95px;
         left:auto;
@@ -492,6 +496,7 @@ html {
         max-width: 375px;
         padding-right: 15px;
         z-index: 1;
+        position: fixed !important;
   
         p {
           margin-bottom: 15px;
@@ -514,6 +519,10 @@ html {
   
         #submit-btn {
           @include button-style;
+        }
+
+        @media (min-width: 993px){
+          position: inherit;
         }
       }
     }

@@ -226,6 +226,9 @@ main #text-container p, main #languages-container p, main #projects-container p,
     font-size: 1.6rem;
   }
 }
+main #top {
+  z-index: 100;
+}
 main #top #text-container h2 {
   font-weight: 300;
   color: currentColor;
@@ -248,9 +251,12 @@ main #top #image-container img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    z-index: 1;
   }
   main #top #text-container {
-    flex-basis: 50%;
+    flex-basis: 40%;
+    align-self: center;
+    text-align: center;
   }
   main #top #text-container h1 {
     font-size: 6rem;
@@ -259,13 +265,15 @@ main #top #image-container img {
   }
   main #top #text-container h2 {
     font-size: 1.8rem;
+    text-align: left;
   }
   main #top #text-container p {
     font-weight: 300;
+    text-align: left;
   }
   main #top #image-container {
-    flex-basis: 40%;
-    width: 80vh;
+    align-self: center;
+    flex-basis: 45%;
   }
   main #top #image-container img {
     width: 100%;
@@ -273,6 +281,7 @@ main #top #image-container img {
   }
 }
 main #btn-container {
+  z-index: 100;
   padding-top: 30px;
   padding-bottom: 30px;
   width: 100%;
@@ -336,18 +345,20 @@ main #btn-container .socials-container .svg-container svg {
 }
 @media (min-width: 993px) {
   main #btn-container {
-    padding-top: 50px;
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
   }
   main #btn-container #contact-button {
     height: 60px;
-    width: 50%;
+    width: 100%;
   }
 }
 main #languages-container {
+  z-index: 100;
   padding-bottom: 5vh;
   border-top: solid;
   border-bottom: solid;
@@ -369,7 +380,13 @@ main #languages-container .card .card-title {
 main #languages-container .card i {
   font-size: 3rem;
 }
+@media (min-width: 993px) {
+  main #languages-container {
+    z-index: 1;
+  }
+}
 main #projects-container {
+  z-index: 100;
   padding-top: 5vh;
 }
 main #projects-container p {
@@ -412,6 +429,9 @@ main #projects-container .card .card-img {
   border-radius: 0;
 }
 @media (min-width: 993px) {
+  main #projects-container {
+    z-index: 1;
+  }
   main #projects-container #project-cards {
     display: flex;
     flex-direction: row;
@@ -446,6 +466,7 @@ main #contact-container {
   max-width: 375px;
   padding-right: 15px;
   z-index: 1;
+  position: fixed !important;
 }
 main #contact-container p {
   margin-bottom: 15px;
@@ -470,6 +491,11 @@ main #contact-container #submit-btn {
   height: auto;
   font-size: 1.4rem;
   font-family: monospace;
+}
+@media (min-width: 993px) {
+  main #contact-container {
+    position: inherit;
+  }
 }
 
 @media (min-width: 993px) {
