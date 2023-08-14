@@ -13,14 +13,11 @@ $headers = "From: noreply@yoursite.com" . "\r\n" . "CC: somebodyelse@example.com
 if ($email != NULL) {
     if (mail($to, $subject, $txt, $headers)) {
         $response['success'] = true;
-        $response['message'] = "Email sent successfully.";
     } else {
         $response['success'] = false;
-        $response['message'] = "Error sending email.";
     }
 } else {
     $response['success'] = false;
-    $response['message'] = "Error submitting form.";
 }
 
 // Set header for JSON response

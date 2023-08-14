@@ -10,11 +10,11 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<link rel="stylesheet" href="./dist/css/main.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/0138ae15cb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./dist/css/main.css?v=v1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0138ae15cb.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -27,26 +27,24 @@
   </button>
   <nav class="main-nav" id="main-nav">
     <ul>
-      <li>
-        <a href="#contact-container">Contact</a>
+      <li id="contact-menu-button" class="contact-btn">
+        Contact
       </li>
-      <li>
-        <a href="#projects-container">Projects</a>
-      </li>
+      <li id="projects-button">Projects</li>
     </ul>
   </nav>
 </div>
 
  <!-- Main Content  -->   
     <main>
-      <div id="text-container">
+      <div id="text-container" style="z-index: 100;">
         <h1 class="emphasize">Hello! <span style="font-weight: 300;">I'm Rachel,</span></h1>
         <h2>a <span id="web-developer">website developer</span> based in Washington.</h2>
         <p>Welcome to my world of web design! I am passionate about crafting accessible and custom websites.
         </p>     
       </div>
 
-      <div id="btn-container">
+      <div id="btn-container" style="z-index: 100;">
         <div class="socials-container">
           <div class="social-icon">
             <a href="https://github.com/rfingerhut93" class="social-icon-link" target="_blank">
@@ -65,12 +63,12 @@
             </a>
           </div>
         </div>
-        <button type="button" name="" id="contact-btn" class="btn">
-          <a href="#contact-container">Contact Me</a>
+        <button type="button" name="" id="contact-button" class="btn contact-btn">
+          Contact Me
         </button>
       </div>
 
-      <div id="languages-container">
+      <div id="languages-container" style="z-index: 100;">
           <div class="row">
             <div class="col-4">
               <div class="card">
@@ -123,7 +121,7 @@
           </div>
       </div>
 
-      <div id="projects-container">
+      <div id="projects-container" style="z-index: 100;">
         <h2><span id="project-title">Projects</span></h2>
         <p>Check out some of my current work!</p>
         <div class="card">
@@ -149,7 +147,7 @@
         </div>
       </div>
 
-      <div id="contact-container">
+      <div id="contact-container" class="position-fixed">
         <h2><span id="contact-title">Contact</span></h2>
         <h3>Get in touch today!</h3>
         <form id="form" action="/send_email.php" method="post">
@@ -174,6 +172,18 @@
 
 
   </main>
+  
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-muted">
+     <!-- Copyright -->
+  <div class="text-center p-4">
+    © 2023 Copyright:
+    <span class=" text-reset fw-bold">rachelfingerhut.com</span>
+  </div>
+  <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -184,7 +194,13 @@
   </script>
 
   <script type="module" src="https://unpkg.com/rough-notation?module"></script>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/modules/annotations.js"></script>
+  <script type="module" src="./js/modules/navigation.js"></script>
+  <script type="module" src="./js/modules/scrolling.js"></script>
+  <script type="module" src="./js/modules/formHandling.js"></script>
+  <script type="module" src="./js/modules/intersections.js"></script>
+
 
 </body>
 
