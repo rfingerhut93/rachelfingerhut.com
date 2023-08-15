@@ -362,9 +362,14 @@ main #btn-container .socials-container .svg-container svg {
 main #languages-container {
   z-index: 100;
   padding-bottom: 5vh;
-  border-top: solid;
-  border-bottom: solid;
   /** LANGUAGE CONTAINER DESKTOP VIEW **/
+}
+main #languages-container .accordion-button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: monospace;
+  line-height: 120%;
 }
 main #languages-container .card {
   margin-bottom: 5px;
@@ -386,9 +391,8 @@ main #languages-container .card i {
 @media (min-width: 993px) {
   main #languages-container {
     z-index: 1;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    background-color: rgba(0, 0, 0, 0.11);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     border: none;
   }
   main #languages-container .card {
@@ -529,7 +533,7 @@ main #contact-container #submit-btn {
   main #form-container {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
   }
   main #form-container #contact-img-container {
     display: flex;
