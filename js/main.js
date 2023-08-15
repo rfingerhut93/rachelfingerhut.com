@@ -1,11 +1,9 @@
 
-import { setupBurgerMenu, setupMenuLinks } from './modules/navigation.js';
 import { scrollToContainer, setupScrollButtons } from './modules/scrolling.js';
+import { setUpMenu } from './modules/navigation.js';
 import { setupContactForm } from './modules/formHandling.js';
 import { setupIntersectionObserver } from './modules/intersections.js';
 import { startRoughAnnotation } from './modules/annotations.js';
-
-
 
 // Initialize annotation on intersection
 function initializeAnnotations() {
@@ -19,17 +17,11 @@ function initializeAnnotations() {
   setupIntersectionObserver(contactTitle, startRoughAnnotation);
 }
 
-// Initialize other components
+// Initialize other components (Menu, Scrolling, Contact Form Submission)
 function initializeComponents() {
-  setupBurgerMenu();
-  setupMenuLinks();
   setupScrollButtons();
+  setUpMenu();
   setupContactForm();
-  
-  // Scroll to projects-container when projects-button is clicked
-  document.getElementById("projects-button").addEventListener("click", function() {
-    scrollToContainer("projects-container");
-  });
 }
 
 // Call initialization functions when the document is ready

@@ -21,8 +21,14 @@ export function scrollToContainer(containerId) {
     }
   }
   }
+
+  
   
   export function setupScrollButtons() {
+    // Scroll to projects-container when projects-button is clicked
+  document.getElementById("projects-button").addEventListener("click", function() {
+    scrollToContainer("projects-container");
+  });
     const contactBtns = document.getElementsByClassName("contact-btn"); 
     for (const contactBtn of contactBtns){
       contactBtn.addEventListener('click', function() {
