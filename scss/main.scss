@@ -379,8 +379,13 @@ html {
       #languages-container {
         z-index: 100;
         padding-bottom: 5vh;
-        border-top: solid;
-        border-bottom: solid;
+        .accordion-button{
+          font-size: 1.6rem;
+          font-weight: 600;
+          margin-bottom: 10px;
+          font-family: monospace;
+          line-height: 120%;
+        }
   
         .card {
           margin-bottom: 5px;
@@ -405,9 +410,8 @@ html {
         /** LANGUAGE CONTAINER DESKTOP VIEW **/
         @media (min-width: 993px){
           z-index: 1;
-          padding-top: 5vh;
-          padding-bottom: 5vh;
-          background-color: rgba(0, 0, 0, 0.11);
+          padding-top: 2vh;
+          padding-bottom: 2vh;
           border: none;
 
           .card{
@@ -558,7 +562,7 @@ html {
         #form-container{
           display: flex;
           flex-direction: row;
-          justify-content: start;
+          justify-content: flex-start;
           #contact-img-container{
             display:flex;
             align-self: center;
@@ -589,5 +593,4 @@ html {
         }
       }
     }
-  
   
