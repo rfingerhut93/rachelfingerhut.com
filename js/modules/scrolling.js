@@ -22,22 +22,31 @@ export function scrollToContainer(containerId) {
   }
   }
 
-  
+  //Checks if website is being displayed on a desktop browser.
+  function isDesktopView() {
+    return window.matchMedia("(min-width: 993px)").matches;
+  }
   
   export function setupScrollButtons() {
     // Scroll to projects-container when projects-button is clicked
   document.getElementById("projects-button").addEventListener("click", function() {
     scrollToContainer("projects-container");
   });
+  // Scroll to contact container when contact button is clicked.
     const contactBtns = document.getElementsByClassName("contact-btn"); 
     for (const contactBtn of contactBtns){
       contactBtn.addEventListener('click', function() {
-        const pageHeight = document.body.scrollHeight;
+        if (isDesktopView() && this.classList.contains("desktop-scroll")){
+          scrollToContainer("contact-container");
+        }
+        else{
+          const pageHeight = document.body.scrollHeight;
         
-        window.scrollTo({
+          window.scrollTo({
           top: pageHeight,
           behavior: 'smooth'
         });
+        }
       });
     }
   }
