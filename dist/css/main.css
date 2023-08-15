@@ -46,6 +46,12 @@ body {
   width: 100%;
   height: 100%;
 }
+@media (min-width: 993px) {
+  body {
+    max-width: 1440px;
+    width: 80%;
+  }
+}
 
 .navbar {
   position: fixed;
@@ -183,6 +189,8 @@ main {
   align-content: center;
   background-color: white;
   height: 2469.55px;
+  z-index: 5;
+  /** MAIN DESKTOP VIEW **/
 }
 main h1 {
   font-size: 2rem;
@@ -197,10 +205,6 @@ main h2 {
   font-family: monospace;
   line-height: 120%;
 }
-main p {
-  line-height: normal;
-  font-size: 16px;
-}
 main .emphasize {
   font-size: 2.5rem;
   font-weight: 700;
@@ -211,92 +215,78 @@ main #text-container, main #languages-container, main #projects-container, main 
   margin: 0 auto;
   padding: 5px;
   width: 100%;
-  padding: 10px 5px;
+  padding: 10px 10px;
 }
 main #text-container p, main #languages-container p, main #projects-container p, main #btn-container p, main #contact-container p {
   margin-bottom: 15px;
+  line-height: normal;
+  font-size: 16px;
 }
-main #text-container h2 {
+@media (min-width: 993px) {
+  main #text-container p, main #languages-container p, main #projects-container p, main #btn-container p, main #contact-container p {
+    font-size: 1.6rem;
+  }
+}
+main #top {
+  z-index: 100;
+  /** MOBILE VIEW **/
+  /** TOP SECTION DESKTOP VIEW **/
+}
+main #top #text-container h2 {
   font-weight: 300;
   color: currentColor;
   font-size: 1.45rem;
 }
-main #languages-container {
-  padding-bottom: 5vh;
-  border-top: solid;
-  border-bottom: solid;
+main #top #image-container {
+  width: 100%;
 }
-main #languages-container .card {
-  margin-bottom: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+main #top #image-container img {
+  max-width: 100%;
+  height: auto;
 }
-main #languages-container .card .card-title {
-  color: #F25757;
-  font-size: 0.95rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-main #languages-container .card i {
-  font-size: 3rem;
-}
-main #projects-container {
-  padding-top: 5vh;
-}
-main #projects-container p {
-  margin-bottom: 15px;
-}
-main #projects-container .card {
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin: 20px 0;
-  align-items: center;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
-  overflow: hidden;
-  border: 0.1px solid rgb(221, 221, 221);
-}
-main #projects-container .card .card-text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-}
-main #projects-container .card .card-text .card-title {
-  font-family: monospace;
-  padding: 0px 20px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  flex-basis: 45%;
-  text-align: center;
-  color: #595FD9;
-}
-main #projects-container .card .card-text .card-description {
-  font-size: 0.9rem;
-  font-weight: 300;
-  flex-basis: 55%;
-  padding: 10px;
-}
-main #projects-container .card .card-img {
-  margin-top: 0;
-  border-radius: 0;
+@media (max-width: 992px) {
+  main #top #image-container {
+    display: none;
+  }
 }
 @media (min-width: 993px) {
-  main #projects-container .card:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    margin: 10px auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  main #top {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    padding-bottom: 10vh;
+  }
+  main #top #text-container {
+    flex-basis: 60%;
+    margin: 0;
+  }
+  main #top #text-container h1 {
+    font-size: 9rem;
+    line-height: 90%;
+    padding-bottom: 2vh;
+  }
+  main #top #text-container h2 {
+    font-size: 1.8rem;
+  }
+  main #top #text-container p {
+    font-weight: 300;
+  }
+  main #top #image-container {
+    align-self: center;
+    flex-basis: 40%;
+    margin: 0 auto;
+  }
+  main #top #image-container img {
+    width: 100%;
+    border-radius: 50%;
   }
 }
 main #btn-container {
+  z-index: 100;
   padding-top: 30px;
   padding-bottom: 30px;
   width: 100%;
+  /** BUTTON CONTAINER DESKTOP VIEW **/
 }
 main #btn-container .btn {
   width: 100%;
@@ -355,6 +345,135 @@ main #btn-container .socials-container .svg-container svg {
   height: auto;
   vertical-align: top;
 }
+@media (min-width: 993px) {
+  main #btn-container {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0;
+    z-index: 1;
+  }
+  main #btn-container #contact-button {
+    height: 60px;
+    width: 100%;
+  }
+}
+main #languages-container {
+  z-index: 100;
+  padding-bottom: 5vh;
+  border-top: solid;
+  border-bottom: solid;
+  /** LANGUAGE CONTAINER DESKTOP VIEW **/
+}
+main #languages-container .card {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main #languages-container .card .card-title {
+  color: #F25757;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+main #languages-container .card i {
+  font-size: 3rem;
+}
+@media (min-width: 993px) {
+  main #languages-container {
+    z-index: 1;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: rgba(0, 0, 0, 0.11);
+    border: none;
+  }
+  main #languages-container .card {
+    margin: 1vh 0;
+  }
+}
+main #projects-container {
+  z-index: 100;
+  padding-top: 5vh;
+}
+main #projects-container p {
+  margin-bottom: 15px;
+}
+main #projects-container .card {
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 20px 0;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.27);
+  overflow: hidden;
+  border: 0.1px solid rgb(221, 221, 221);
+}
+main #projects-container .card .card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+main #projects-container .card .card-text .card-title {
+  font-family: monospace;
+  padding: 0px 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  flex-basis: 45%;
+  text-align: center;
+  color: #595FD9;
+}
+main #projects-container .card .card-text .card-description {
+  font-size: 0.9rem;
+  font-weight: 300;
+  flex-basis: 55%;
+  padding: 10px;
+}
+main #projects-container .card .card-img {
+  margin-top: 0;
+  border-radius: 0;
+}
+@media (min-width: 993px) {
+  main #projects-container {
+    z-index: 1;
+    padding-top: 10vh;
+  }
+  main #projects-container #project-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  main #projects-container #project-cards .card {
+    flex: 1 0 calc(33.33% - 10px);
+    min-width: 300px;
+    padding: 20px;
+  }
+  main #projects-container #project-cards .card .card-text {
+    margin-bottom: 10px;
+  }
+  main #projects-container #project-cards .card .card-text .card-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  main #projects-container #project-cards .card .card-text .card-description {
+    margin: 0;
+  }
+  main #projects-container #project-cards .card .card-text .card-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+  }
+}
+main #contact-img-container {
+  display: none;
+}
 main #contact-container {
   bottom: 95px;
   left: auto;
@@ -362,6 +481,8 @@ main #contact-container {
   max-width: 375px;
   padding-right: 15px;
   z-index: 1;
+  position: fixed !important;
+  /** CONTACT CONTAINER DESKTOP VIEW **/
 }
 main #contact-container p {
   margin-bottom: 15px;
@@ -387,14 +508,47 @@ main #contact-container #submit-btn {
   font-size: 1.4rem;
   font-family: monospace;
 }
+@media (min-width: 993px) {
+  main #contact-container {
+    background-color: white;
+    margin: 0 auto;
+    padding: 5px;
+    width: 100%;
+    position: static !important;
+    max-width: 100%;
+    padding-top: 5vh;
+  }
+  main #contact-container h3 {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 993px) {
+  main {
+    height: auto;
+  }
+  main #form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+  main #form-container #contact-img-container {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    margin-left: 5vh;
+  }
+  main #form-container #contact-img-container object {
+    width: 100%;
+  }
+}
 
 @media (min-width: 993px) {
-  body {
-    width: auto;
-  }
   .navbar {
-    position: fixed;
+    background-color: white;
+    margin: 0 auto;
+    padding: 5px;
     width: 100%;
+    position: fixed;
     background-color: white;
     height: 10vh;
     top: 0;
