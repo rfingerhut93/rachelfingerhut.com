@@ -3,7 +3,7 @@ import { scrollToContainer, setupScrollButtons } from './modules/scrolling.js';
 import { setUpMenu } from './modules/navigation.js';
 import { setupContactForm } from './modules/formHandling.js';
 import { setupIntersectionObserver } from './modules/intersections.js';
-import { startRoughAnnotation } from './modules/annotations.js';
+import { startRoughAnnotation, roughAnnotationBox } from './modules/annotations.js';
 
 // Initialize annotation on intersection
 function initializeAnnotations() {
@@ -13,8 +13,8 @@ function initializeAnnotations() {
 
 
   setupIntersectionObserver(webDev, startRoughAnnotation);
-  setupIntersectionObserver(projectTitle, startRoughAnnotation);
-  setupIntersectionObserver(contactTitle, startRoughAnnotation);
+  setupIntersectionObserver(projectTitle, roughAnnotationBox);
+  setupIntersectionObserver(contactTitle, roughAnnotationBox);
 }
 
 // Initialize other components (Menu, Scrolling, Contact Form Submission)

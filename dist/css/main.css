@@ -205,6 +205,9 @@ main h2 {
   font-family: monospace;
   line-height: 120%;
 }
+main .section-title {
+  font-size: 2.5rem;
+}
 main .emphasize {
   font-size: 2.5rem;
   font-weight: 700;
@@ -364,12 +367,22 @@ main #languages-container {
   padding-bottom: 5vh;
   /** LANGUAGE CONTAINER DESKTOP VIEW **/
 }
+main #languages-container .accordion-item {
+  --bs-accordion-active-bg: white;
+  --bs-accordion-border-width: 3px;
+  --bs-accordion-border-color: #595FD9;
+}
 main #languages-container .accordion-button {
-  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 10px;
-  font-family: monospace;
-  line-height: 120%;
+}
+main #languages-container .accordion-button:not(.collapsed) {
+  color: black;
+}
+main #languages-container .accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+main #languages-container .accordion-button:focus {
+  visibility: hidden;
 }
 main #languages-container .card {
   margin-bottom: 5px;
@@ -446,6 +459,7 @@ main #projects-container .card .card-img {
   main #projects-container {
     z-index: 1;
     padding-top: 10vh;
+    padding-bottom: 5vh;
   }
   main #projects-container #project-cards {
     display: flex;
@@ -521,6 +535,8 @@ main #contact-container #submit-btn {
     position: static !important;
     max-width: 100%;
     padding-top: 5vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   main #contact-container h3 {
     font-size: 1.6rem;
@@ -528,7 +544,7 @@ main #contact-container #submit-btn {
 }
 @media (min-width: 993px) {
   main {
-    height: auto;
+    height: 100%;
   }
   main #form-container {
     display: flex;

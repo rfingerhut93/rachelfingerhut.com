@@ -1,6 +1,7 @@
 @import "./resets";
 @import "./variables";
 
+
 @mixin container{
     background-color: $body-background;
     margin: 0 auto;
@@ -208,6 +209,12 @@ html {
         margin-bottom: 10px;
         font-family: monospace;
         line-height: 120%;
+
+        
+      }
+
+      .section-title{
+        font-size: 2.5rem;
       }
   
       .emphasize {
@@ -379,13 +386,27 @@ html {
       #languages-container {
         z-index: 100;
         padding-bottom: 5vh;
-        .accordion-button{
-          font-size: 1.6rem;
-          font-weight: 600;
-          margin-bottom: 10px;
-          font-family: monospace;
-          line-height: 120%;
+        .accordion-item {
+          --bs-accordion-active-bg: white;
+          --bs-accordion-border-width: 3px;
+          --bs-accordion-border-color: #595FD9;
+          
         }
+        
+        .accordion-button{
+          font-weight: 600;
+          &:not(.collapsed){
+            color: black;
+          }
+          &::after{
+              background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+            }
+          &:focus{
+            visibility: hidden;
+          }
+          
+        }
+        
   
         .card {
           margin-bottom: 5px;
@@ -471,6 +492,7 @@ html {
         @media (min-width: 993px) {
           z-index: 1;
           padding-top: 10vh;
+          padding-bottom: 5vh;
 
           #project-cards{
             display: flex;
@@ -549,6 +571,8 @@ html {
           position: static !important;
           max-width: 100%;
           padding-top: 5vh;
+          padding-bottom: 0;
+          margin-bottom: 0;
 
           h3{
             font-size: 1.6rem;
@@ -558,7 +582,7 @@ html {
 
       /** MAIN DESKTOP VIEW **/
       @media (min-width: 993px){
-        height: auto;
+        height: 100%;
         #form-container{
           display: flex;
           flex-direction: row;
